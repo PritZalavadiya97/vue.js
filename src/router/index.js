@@ -24,6 +24,11 @@ const routes = [
     path: '/two_way',
     name: 'two_way',
     component: () => import('../views/TwoWay.vue') 
+  },
+  {
+    path: '/datapass',
+    name: 'datapass',
+    component: () => import('../views/DataPass.vue') 
   }
 ]
 

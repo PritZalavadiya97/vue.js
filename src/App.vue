@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/contact">Contact</router-link> |
-      <router-link to="/two_way">Two Way</router-link>
+      <router-link to="/two_way">Two Way</router-link> |
+      <router-link to="/datapass">Data Pass</router-link>
     </nav>
     <router-view/>
   </div>

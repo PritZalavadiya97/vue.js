@@ -7,15 +7,21 @@
         <button v-on:dblclick="getData('Button 2 Click')">Click Me</button>
         <h2 v-on:mousemove="move()">Mouse Hover</h2>
         <h3>{{count}}</h3>
+        <student mess="student props" :get_Message="getMessage"/>
+        <h1>{{childData}}</h1>
     </div>    
 </template>
 
 <script>
+
+import student from "../components/student.vue"
+
 export default{
     name : "Home_1",
     data(){
         return{
-            count :0
+            count :0,
+            childData : ""
         }
     },
     methods : {
@@ -23,14 +29,17 @@ export default{
             alert("Hello test");
         },
         getData() {
-            this.count = this.count+1;
+            this.count = this.count + 1;
         },
         get_Data() {
-            this.count = this.count-1;
+            this.count = this.count - 1;
         },
-        move(){
-            // console.warn("yes warn")
+        getMessage(userName){
+            this.childData = userName
         }
+    },
+    components : {
+        student,
     }
 }
 </script>
